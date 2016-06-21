@@ -1,5 +1,7 @@
 <?php
 
+namespace DevelopmentTools;
+
 class Template
 {
 

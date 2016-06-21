@@ -3,7 +3,7 @@
  * Plugin Name: Development Tools
  * Plugin URI: http://kilroyweb.com
  * Description: Classes and Scripts for Wordpress Development
- * Version: 0.1.0
+ * Version: 0.1.1
  * Author: Jeff Kilroy
  * Author URI: http://kilroyweb.com
  * License: GPL2
