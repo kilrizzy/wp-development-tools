@@ -17,9 +17,20 @@ $myUpdateChecker = new $className(
     'master'
 );
 
-if (!class_exists('DevelopmentTools\DevelopmentTool')) {
-    require_once __DIR__ . '/classes/DevelopmentTool.php';
+$classes = [
+    'DevelopmentTools\DevelopmentTool' => __DIR__ . '/classes/DevelopmentTool.php',
+    'DevelopmentTools\Post' => __DIR__ . '/classes/Post.php',
+    'DevelopmentTools\PostType' => __DIR__ . '/classes/PostType.php',
+    'DevelopmentTools\Taxonomy' => __DIR__ . '/classes/Taxonomy.php',
+    'DevelopmentTools\Template' => __DIR__ . '/classes/Template.php',
+];
+
+foreach($classes as $className=>$classPath){
+    if (!class_exists($className)) {
+        require_once $classPath;
+    }
 }
+
 $developmentTool = new DevelopmentTools\DevelopmentTool([
     'pluginDir' => __DIR__,
     'pluginPath' => plugin_dir_url(__FILE__),
